@@ -98,6 +98,10 @@ app.use("/api/checkout", checkoutRouter);
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "ok", message: "API is running" });
 });
+// Root route for Render health and user-friendly message
+app.get("/", (req, res) => {
+  res.send("E-commerce backend is running!");
+});
 
 // Test route for cart
 app.get("/api/test-cart", (req, res) => {
